@@ -1,0 +1,1932 @@
+  [1m[35m (18.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE DATABASE `geektwitter_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE DATABASE `geektwitter_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (103.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (59.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT GET_LOCK('7811680002110548305', 0)[0m
+  [1m[35m (87.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-11-06 06:44:46.232865', '2020-11-06 06:44:46.232865')[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7811680002110548305')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/hello/index" for ::1 at 2020-11-06 15:58:50 +0900
+  [1m[35m (7.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActionController::RoutingError (No route matches [GET] "/hello/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/hello/index" for ::1 at 2020-11-06 15:59:40 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/hello/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/hello/index" for ::1 at 2020-11-06 16:00:00 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 81)
+[Webpacker] Compiling...
+Started GET "/hello/index" for ::1 at 2020-11-06 16:00:08 +0900
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 8037ms (ActiveRecord: 0.0ms | Allocations: 22189)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+Started GET "/hello/index" for ::1 at 2020-11-06 16:00:16 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 6987ms (ActiveRecord: 0.0ms | Allocations: 14155)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 6682ms (ActiveRecord: 0.0ms | Allocations: 328196)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/hello/index" for ::1 at 2020-11-06 16:09:32 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 205)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 7060ms (ActiveRecord: 0.0ms | Allocations: 11600)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/hello/index" for ::1 at 2020-11-06 16:19:31 +0900
+  [1m[35m (6.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 205)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 6770ms (ActiveRecord: 0.0ms | Allocations: 11532)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/hello/index" for ::1 at 2020-11-06 16:39:16 +0900
+  [1m[35m (14.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 205)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+internal/modules/cjs/loader.js:800
+    throw err;
+    ^
+
+Error: Cannot find module 'C:\Users\jfkdl\OneDrive\Desktop\geektwitter\node_modules\webpack\bin\webpack.js'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Completed 500 Internal Server Error in 5510ms (ActiveRecord: 0.0ms | Allocations: 11566)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/hello/index" for ::1 at 2020-11-06 17:10:22 +0900
+  [1m[35m (18.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 47.0ms | Allocations: 205)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/jfkdl/OneDrive/Desktop/geektwitter/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 8949ms
+Built at: 2020-11-06 17:10:42
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 18878ms (Views: 18822.7ms | ActiveRecord: 0.0ms | Allocations: 10756)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:19:03 +0900
+  [1m[35m (16.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 0.8ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 0.0ms | Allocations: 5354)
+
+
+Started GET "/tweets" for ::1 at 2020-11-06 17:23:33 +0900
+  [1m[35m (4.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActionController::RoutingError (No route matches [GET] "/tweets"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets" for ::1 at 2020-11-06 17:25:45 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 611ms (Views: 602.6ms | ActiveRecord: 0.0ms | Allocations: 21644)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:28:55 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 58.6ms | ActiveRecord: 0.0ms | Allocations: 5990)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:28:58 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 0.8ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms | Allocations: 4809)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:39:25 +0900
+  [1m[35m (6.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 106.9ms | ActiveRecord: 0.0ms | Allocations: 9943)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:39:27 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 1.0ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 4865)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:39:28 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 4691)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:39:29 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms | Allocations: 4624)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:39:30 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 4672)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:42:04 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.0ms | Allocations: 5709)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:42:07 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 422.0ms | Allocations: 149784)
+Completed 500 Internal Server Error in 433ms (ActiveRecord: 0.0ms | Allocations: 150380)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tweets_index_path' for #<#<Class:0x00000000097a7930>:0x0000000005292c50>
+Did you mean?  tweets_path):
+    1: My name is GeekSalon
+    2: <%= link_to 'トップページ', hello_index_path %>
+    3: <%= link_to '', tweets_index_path %>
+  
+app/views/hello/link.html.erb:3
+Started GET "/hello/link" for ::1 at 2020-11-06 17:42:25 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 380.0ms | Allocations: 146700)
+Completed 500 Internal Server Error in 392ms (ActiveRecord: 0.0ms | Allocations: 147899)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tweets_index_path' for #<#<Class:0x00000000094d18c8>:0x00000000094dbee0>
+Did you mean?  tweets_path):
+    1: My name is GeekSalon
+    2: <%= link_to 'トップページ', hello_index_path %>
+    3: <%= link_to 'あいうえお', tweets_index_path %>
+  
+app/views/hello/link.html.erb:3
+Started GET "/hello/link" for ::1 at 2020-11-06 17:42:53 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 556.8ms | Allocations: 146582)
+Completed 500 Internal Server Error in 573ms (ActiveRecord: 0.0ms | Allocations: 147766)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tweets_index_path' for #<#<Class:0x00000000097c75c8>:0x00000000097cf2c8>
+Did you mean?  tweets_path):
+    1: My name is GeekSalon
+    2: <%= link_to 'トップページ', tweets_index_path %>
+  
+app/views/hello/link.html.erb:2
+Started GET "/hello/link" for ::1 at 2020-11-06 17:43:30 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 1.2ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 77.8ms | ActiveRecord: 0.0ms | Allocations: 5662)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:43:35 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 4915)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:43:37 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms | Allocations: 4625)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:43:38 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 4678)
+
+
+Started GET "/hello/index" for ::1 at 2020-11-06 17:44:16 +0900
+Processing by HelloController#index as HTML
+  Rendering hello/index.html.erb within layouts/application
+  Rendered hello/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 0.0ms | Allocations: 5688)
+
+
+Started GET "/hello/link" for ::1 at 2020-11-06 17:44:23 +0900
+Processing by HelloController#link as HTML
+  Rendering hello/link.html.erb within layouts/application
+  Rendered hello/link.html.erb within layouts/application (Duration: 0.7ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 4906)
+
+
+Started GET "/tweets" for ::1 at 2020-11-06 17:44:25 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 5202)
+
+
+  [1m[35m (17.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('7811680002110548305', 0)[0m
+  [1m[35m (89.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTweets (20201106150456)
+  [1m[35m (80.4ms)[0m  [1m[35mCREATE TABLE `tweets` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20201106150456')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7811680002110548305')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (8.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/tweets" for ::1 at 2020-11-07 00:34:03 +0900
+  [1m[35m (10.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 250ms (Views: 219.2ms | ActiveRecord: 0.0ms | Allocations: 9565)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:34:13 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 498.3ms | Allocations: 4480)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 701ms (Views: 559.6ms | ActiveRecord: 82.5ms | Allocations: 12607)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:44:07 +0900
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1538)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 108.2ms | Allocations: 6855)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>GeekTwitter</h1>
+<h3>新規Tweet</h3>
+<%= form_for @tweet do |f| %>
+    <div class="field">
+
+        <%= f.label :body %>
+        <%= f.text_field :body, :size => 50x10 %>
+    </div>
+    <%= f.submit "Tweetする" %>
+<% end %>
+<%= link_to "Tweet一覧に戻る", tweets_path %>
+    
+):
+1:    <h1>GeekTwitter</h1>
+2:    <h3>新規Tweet</h3>
+3:    <%= form_for @tweet do |f| %>
+4:        <div class="field">
+5:    
+6:            <%= f.label :body %>
+7:            <%= f.text_field :body, :size => 50x10 %>
+8:        </div>
+9:        <%= f.submit "Tweetする" %>
+10:    <% end %>
+11:    <%= link_to "Tweet一覧に戻る", tweets_path %>
+12:        
+  
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tweets/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:44:39 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 209.4ms | Allocations: 5174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 488ms (Views: 476.3ms | ActiveRecord: 0.0ms | Allocations: 13615)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:44:55 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 225ms (Views: 218.5ms | ActiveRecord: 0.0ms | Allocations: 6158)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:45:11 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 627)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 115.8ms | ActiveRecord: 0.0ms | Allocations: 6140)
+
+
+Started POST "/tweets" for ::1 at 2020-11-07 00:45:35 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-11-07 00:45:49 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 112ms (Views: 105.7ms | ActiveRecord: 0.0ms | Allocations: 6148)
+
+
+Started POST "/tweets" for ::1 at 2020-11-07 00:45:52 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tweets" for ::1 at 2020-11-07 00:45:59 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-11-10 01:45:21 +0900
+  [1m[35m (17.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (79.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 272.5ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1054ms (Views: 818.0ms | ActiveRecord: 93.5ms | Allocations: 15052)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-10 01:45:46 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 179.4ms | Allocations: 3688)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 279ms (Views: 273.5ms | ActiveRecord: 0.0ms | Allocations: 9120)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 12:23:19 +0900
+  
+Mysql2::Error::ConnectionError (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `connect'
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-11-12 12:23:53 +0900
+  [1m[35m (22.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (109.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 315.5ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 932ms (Views: 736.3ms | ActiveRecord: 106.6ms | Allocations: 14232)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 12:24:19 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"qLO+OsqGzBL1vJsQga9Nr3toRRiAFjDF7+TaJj/sW5pQChnxIPeic8j00NmkD1W+lQkrDZfk1Yb73mo8nMmzEQ==", "tweet"=>{"body"=>"こんにちは"}, "commit"=>"Tweetする"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[36mTweet Create (6.9ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('こんにちは', '2020-11-12 03:24:19.830739', '2020-11-12 03:24:19.830739')[0m
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 30ms (ActiveRecord: 9.5ms | Allocations: 3320)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 12:24:19 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 0.0ms | Allocations: 4857)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 12:24:23 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 421)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 5018)
+
+
+  [1m[35m (8.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTweet Load (8.2ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` LIMIT 11[0m
+Started GET "/tweets/new" for ::1 at 2020-11-12 13:04:00 +0900
+  [1m[35m (21.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 42.7ms | Allocations: 2355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 773ms (Views: 614.1ms | ActiveRecord: 94.4ms | Allocations: 14958)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 13:04:08 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"LSvU3s3cF6eidOsi9/2JNhQRKLNRV+c0FNnheuLhIInVknMVJ615xp88oOvSXZEn+nBGpkalAncA41FgQcTIAg==", "tweet"=>{"body"=>"おはよう"}, "commit"=>"Tweetする"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (8.8ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('おはよう', '2020-11-12 04:04:08.387915', '2020-11-12 04:04:08.387915')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 51ms (ActiveRecord: 11.6ms | Allocations: 3344)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:04:08 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 148ms (Views: 140.6ms | ActiveRecord: 1.0ms | Allocations: 5771)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 13:04:13 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 422)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 5037)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 13:04:19 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"72+3G30RElktIWlzrUS5p0ixa2zFshARJaqWNRtaxGz9y1ci0+9kX5xI/18+GUfA71x3TRe9YSQ5o0GZAu4dmg==", "tweet"=>{"body"=>"いい天気ですね"}, "commit"=>"Tweetする"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('いい天気ですね', '2020-11-12 04:04:19.501352', '2020-11-12 04:04:19.501352')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 50ms (ActiveRecord: 2.4ms | Allocations: 2801)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:04:19 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 45.9ms | ActiveRecord: 0.4ms | Allocations: 5418)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:20:45 +0900
+  [1m[35m (17.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (17.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 46.2ms | Allocations: 3846)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 407ms (Views: 340.4ms | ActiveRecord: 17.0ms | Allocations: 9646)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:20:50 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (5.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 68.1ms | ActiveRecord: 5.0ms | Allocations: 5949)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:20:52 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.7ms | Allocations: 5510)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 13:20:54 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 24.3ms | Allocations: 677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 88.8ms | ActiveRecord: 0.0ms | Allocations: 5420)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 13:21:03 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"BbJrmGFKuPgdgKNc0Ebmwurjahgfcwh5jWapgMYbjVUXFouhz7TO/qzpNXBDGxilTQ52Oc18eUyRb34s369Uow==", "tweet"=>{"body"=>"カレー食べたい"}, "commit"=>"Tweetする"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (9.0ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('カレー食べたい', '2020-11-12 04:21:03.347278', '2020-11-12 04:21:03.347278')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 62ms (ActiveRecord: 13.3ms | Allocations: 3133)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:21:03 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 966)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.6ms | Allocations: 5561)
+
+
+Started GET "/tweets/4" for ::1 at 2020-11-12 13:21:06 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 0.6ms | Allocations: 5249)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:21:09 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.5ms | Allocations: 5560)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:21:41 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.7ms | Allocations: 5255)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:21:44 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.5ms | Allocations: 5574)
+
+
+Started GET "/tweets/3" for ::1 at 2020-11-12 13:21:46 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTweet Load (12.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 111.2ms | ActiveRecord: 12.7ms | Allocations: 5259)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:28:24 +0900
+  [1m[35m (7.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (5.3ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 203ms (Views: 187.7ms | ActiveRecord: 5.3ms | Allocations: 5254)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:43:17 +0900
+  [1m[35m (29.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (2.1ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 52.3ms | Allocations: 4493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 368ms (Views: 283.0ms | ActiveRecord: 25.1ms | Allocations: 14140)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 13:43:23 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 252.0ms | Allocations: 2189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 310ms (Views: 305.5ms | ActiveRecord: 0.0ms | Allocations: 6950)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 13:43:29 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"8RC4bi2wGIEESIyYN0q7WVlosh1CS4aqahL0SjBRjvHjtFhXg05uh7UhGrSkF0U+/oWuPJBE9592GyPmKeVXBw==", "tweet"=>{"body"=>"ほら言ったでしょ"}, "commit"=>"Tweetする"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (5.8ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('ほら言ったでしょ', '2020-11-12 04:43:29.736565', '2020-11-12 04:43:29.736565')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 50ms (ActiveRecord: 9.8ms | Allocations: 3349)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:43:29 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 1160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.6ms | Allocations: 5765)
+
+
+Started GET "/tweets/1/edit" for ::1 at 2020-11-12 13:43:33 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (2.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:24:in `edit'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 68.1ms | ActiveRecord: 2.4ms | Allocations: 6402)
+
+
+Started PATCH "/tweets/1" for ::1 at 2020-11-12 13:43:40 +0900
+  
+ActionController::RoutingError (No route matches [PATCH] "/tweets/1"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/tweets/1" for ::1 at 2020-11-12 13:45:18 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"authenticity_token"=>"IYPlX/3xGGYFfI3w8lCbTzQR4ypVw2yygV998RfeZKtMZMZG89RI7ALQQoXPJbRXIjM1gj6ZzOD2HxltP8P9FQ==", "tweet"=>{"body"=>"こんにちは、こんばんは"}, "commit"=>"編集する", "id"=>"1"}
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+  [1m[36mTweet Update (17.0ms)[0m  [1m[33mUPDATE `tweets` SET `tweets`.`body` = 'こんにちは、こんばんは', `tweets`.`updated_at` = '2020-11-12 04:45:18.554819' WHERE `tweets`.`id` = 1[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+Redirected to http://localhost:3000/tweets/1
+Completed 302 Found in 84ms (ActiveRecord: 63.4ms | Allocations: 7250)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:45:18 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 0.5ms | Allocations: 5749)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:45:25 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.4ms | Allocations: 5788)
+
+
+Started GET "/tweets/1/edit" for ::1 at 2020-11-12 13:45:27 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:24:in `edit'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.5ms | Allocations: 5717)
+
+
+Started PATCH "/tweets/1" for ::1 at 2020-11-12 13:45:34 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"authenticity_token"=>"aDt2x/76yo2pajfN6OTJKBHy0mb9e2gtWXbfK0znuusF3FXe8N+aB67G+LjVkeYwB9AEzpYhyH8uNru3ZPojVQ==", "tweet"=>{"body"=>"おはよう、こんにちは、こんばんは"}, "commit"=>"編集する", "id"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+  [1m[36mTweet Update (4.3ms)[0m  [1m[33mUPDATE `tweets` SET `tweets`.`body` = 'おはよう、こんにちは、こんばんは', `tweets`.`updated_at` = '2020-11-12 04:45:34.565597' WHERE `tweets`.`id` = 1[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:29:in `update'
+Redirected to http://localhost:3000/tweets/1
+Completed 302 Found in 30ms (ActiveRecord: 6.7ms | Allocations: 3597)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:45:34 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.5ms | Allocations: 5283)
+
+
+Started GET "/tweets/1" for ::1 at 2020-11-12 13:51:06 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 62.1ms | ActiveRecord: 41.5ms | Allocations: 9413)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:51:10 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2097)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.5ms | Allocations: 6833)
+
+
+Started DELETE "/tweets/1" for ::1 at 2020-11-12 13:51:17 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/QSdPy8UeaOPHZ1DqDhiVMHefTEzk0yKi5C5Cv0pTx+jRXoShXbVtQJ2PEC0VzCwZMJBIJAKdegtXxL4TSq+pg==", "id"=>"1"}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:37:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[36mTweet Destroy (6.6ms)[0m  [1m[31mDELETE FROM `tweets` WHERE `tweets`.`id` = 1[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 24ms (ActiveRecord: 9.2ms | Allocations: 3471)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:51:17 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.4ms | Allocations: 6198)
+
+
+Started GET "/tweets/2" for ::1 at 2020-11-12 13:51:21 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 0.6ms | Allocations: 5282)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:51:26 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.4ms | Allocations: 6205)
+
+
+Started DELETE "/tweets/3" for ::1 at 2020-11-12 13:51:28 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5xyMWcecRI/4EQBfEjqj8p1Bg+bg0naf+Ef25pB8DBNjXY0gQ2K+ST6yxKsFXGBmO5vz0Qm7OQ+JkIZdhEUkDg==", "id"=>"3"}
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:37:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM `tweets` WHERE `tweets`.`id` = 3[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 15ms (ActiveRecord: 3.7ms | Allocations: 3088)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:51:28 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.4ms | Allocations: 5972)
+
+
+Started GET "/tweets/2" for ::1 at 2020-11-12 13:51:32 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.7ms | Allocations: 5282)
+
+
+Started GET "/tweets/4" for ::1 at 2020-11-12 13:51:35 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.4ms | Allocations: 5276)
+
+
+Started DELETE "/tweets/5" for ::1 at 2020-11-12 13:51:39 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yy5JrUX9EWdAttngyYXIx93P0KvcsVE69joyl+xdq+czl+5mr4x/Bn3+kinsJdDWM66+vstDtHniAIKNT3hDbA==", "id"=>"5"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:37:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[36mTweet Destroy (1.5ms)[0m  [1m[31mDELETE FROM `tweets` WHERE `tweets`.`id` = 5[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 14ms (ActiveRecord: 4.3ms | Allocations: 3049)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:51:39 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.4ms | Allocations: 5732)
+
+
+Started GET "/tweets/new" for ::1 at 2020-11-12 13:51:45 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.0ms | Allocations: 5433)
+
+
+Started POST "/tweets" for ::1 at 2020-11-12 13:52:00 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"4hugflLo+frFOraz/gRc/pjpqR4mOnYkWyQQnc9i05fwv0BH/BaP/HRTIJ9tWaKZPwS1P/Q1BxFHLccx1tYKYQ==", "tweet"=>{"body"=>"この投稿はid:6?"}, "commit"=>"Tweetする"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (1.7ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('この投稿はid:6?', '2020-11-12 04:52:00.407927', '2020-11-12 04:52:00.407927')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms | Allocations: 2801)
+
+
+Started GET "/tweets" for ::1 at 2020-11-12 13:52:00 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1376)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.7ms | Allocations: 5985)
+
+
+Started GET "/tweets/6" for ::1 at 2020-11-12 13:52:02 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.5ms | Allocations: 5269)
+
+
+Started GET "/" for ::1 at 2020-11-17 20:35:28 +0900
+  
+Mysql2::Error::ConnectionError (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `connect'
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-17 20:36:18 +0900
+  [1m[35m (11.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (185.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 69.7ms | Allocations: 195)
+Completed 200 OK in 140ms (Views: 83.0ms | ActiveRecord: 0.0ms | Allocations: 1001)
+
+
+Started GET "/tweets" for ::1 at 2020-11-17 20:38:25 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (103.9ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 230.0ms | Allocations: 4737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1674ms (Views: 1391.5ms | ActiveRecord: 159.9ms | Allocations: 20380)
+
+
+Started GET "/tweets" for ::1 at 2020-12-16 17:56:44 +0900
+  [1m[35m (16.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (78.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (60.1ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 182.0ms | Allocations: 4854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 818ms (Views: 574.6ms | ActiveRecord: 103.6ms | Allocations: 13874)
+
+
+Started GET "/tweets" for ::1 at 2020-12-16 17:56:57 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1384)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 1.0ms | Allocations: 5554)
+
+
+Started GET "/tweets/new" for ::1 at 2020-12-16 17:57:02 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 523.8ms | Allocations: 4617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 629ms (Views: 624.2ms | ActiveRecord: 0.0ms | Allocations: 8911)
+
+
+Started POST "/tweets" for ::1 at 2020-12-16 17:57:09 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"rWqOlbe+ETp72kNNfk+Dr35OfNgo7oYwYquHw8nghREpTvZHmwZ9LxNdlmGLBPtmXQLkiNneCdkhH4ACsMT1cg==", "tweet"=>{"body"=>"rarararara"}, "commit"=>"Tweetする"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (6.4ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('rarararara', '2020-12-16 08:57:09.653759', '2020-12-16 08:57:09.653759')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 29ms (ActiveRecord: 9.3ms | Allocations: 3326)
+
+
+Started GET "/tweets" for ::1 at 2020-12-16 17:57:09 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.7ms | Allocations: 5749)
+
+
+Started GET "/tweets/7" for ::1 at 2020-12-16 17:57:20 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTweet Load (4.9ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 24.6ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 161ms (Views: 91.4ms | ActiveRecord: 4.9ms | Allocations: 5933)
+
+
+Started GET "/tweets" for ::1 at 2020-12-16 17:57:24 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.6ms | Allocations: 5744)
+
+
+Started GET "/tweets" for ::1 at 2020-12-16 18:39:55 +0900
+  [1m[35m (40.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (34.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 182.2ms | Allocations: 1864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 541ms (Views: 415.0ms | ActiveRecord: 34.7ms | Allocations: 6983)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 16:24:53 +0900
+  
+Mysql2::Error::ConnectionError (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `connect'
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets" for ::1 at 2020-12-22 16:26:29 +0900
+  
+Mysql2::Error::ConnectionError (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `connect'
+mysql2-0.5.3-x64 (mingw32) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets" for ::1 at 2020-12-22 16:28:29 +0900
+  [1m[35m (12.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (77.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (100.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 228.8ms | Allocations: 5067)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1488ms (Views: 1263.2ms | ActiveRecord: 144.2ms | Allocations: 21744)
+
+
+Started GET "/tweets/2/edit" for ::1 at 2020-12-22 16:30:56 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (16.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:24:in `edit'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 417.7ms | Allocations: 2159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 821ms (Views: 553.7ms | ActiveRecord: 16.0ms | Allocations: 9814)
+
+
+Started GET "/tweets/4" for ::1 at 2020-12-22 16:31:08 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (1.2ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `show'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 39.4ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 172ms (Views: 161.6ms | ActiveRecord: 1.2ms | Allocations: 5135)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 16:31:13 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (6.1ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 79.3ms | ActiveRecord: 6.1ms | Allocations: 5768)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 16:37:50 +0900
+  [1m[35m (4.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 150.1ms | Allocations: 9177)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms | Allocations: 10375)
+
+
+  
+ActionView::Template::Error (The asset "index.css" is not present in the asset pipeline.
+):
+    1: <%= stylesheet_link_tag 'index', :media => "all" %>
+    2: 
+    3: <div class="tweets-container">
+    4: <h3>Tweet一覧</h3>
+  
+app/views/tweets/index.html.erb:1
+Started GET "/tweets" for ::1 at 2020-12-22 16:39:11 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/index.html.erb within layouts/application (Duration: 59.9ms | Allocations: 6169)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms | Allocations: 7392)
+
+
+  
+ActionView::Template::Error (The asset "index.css" is not present in the asset pipeline.
+):
+    1: <%= stylesheet_link_tag 'index', :media =>"all" %>
+    2: 
+    3: <div class="tweets-container">
+    4: <h3>Tweet一覧</h3>
+  
+app/views/tweets/index.html.erb:1
+Started GET "/tweets" for ::1 at 2020-12-22 16:42:50 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.9ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 727.5ms | Allocations: 14527)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 845ms (Views: 839.5ms | ActiveRecord: 1.9ms | Allocations: 18826)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 16:43:01 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 3090)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 112.0ms | ActiveRecord: 1.0ms | Allocations: 7145)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:11:45 +0900
+  [1m[35m (17.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (8.7ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 411.6ms | Allocations: 7777)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 551ms (Views: 520.7ms | ActiveRecord: 8.7ms | Allocations: 11728)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:12:57 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (12.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 745.0ms | Allocations: 7444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 827ms (Views: 808.8ms | ActiveRecord: 12.5ms | Allocations: 11403)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:13:28 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 275.7ms | Allocations: 7442)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 365ms (Views: 361.8ms | ActiveRecord: 0.6ms | Allocations: 11414)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:23:09 +0900
+  [1m[35m (7.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (4.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 360.5ms | Allocations: 7691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 496ms (Views: 458.0ms | ActiveRecord: 4.5ms | Allocations: 12631)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:23:18 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.2ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 187.9ms | Allocations: 3098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 267ms (Views: 263.2ms | ActiveRecord: 1.2ms | Allocations: 7169)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:23:34 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 233.6ms | Allocations: 194)
+Completed 200 OK in 250ms (Views: 236.3ms | ActiveRecord: 0.0ms | Allocations: 988)
+
+
+Started GET "/new" for ::1 at 2020-12-22 17:24:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2020-12-22 17:26:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tweets" for ::1 at 2020-12-22 17:26:27 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 26.5ms | Allocations: 3348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 126.6ms | ActiveRecord: 1.0ms | Allocations: 8384)
+
+
+Started GET "/tweets/new" for ::1 at 2020-12-22 17:26:41 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 466.5ms | Allocations: 15444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 552ms (Views: 544.3ms | ActiveRecord: 0.0ms | Allocations: 19572)
+
+
+Started POST "/tweets" for ::1 at 2020-12-22 17:26:51 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"pG36fyse36vh/JtZ9oNV0U5v589KHYbOpCJG0e1luBsgSYKtB6azvol7TnUDyC0YbSN/n7stCSfnlkEQlEHIeA==", "tweet"=>{"body"=>"label"}, "commit"=>"送信"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[36mTweet Create (19.0ms)[0m  [1m[32mINSERT INTO `tweets` (`body`, `created_at`, `updated_at`) VALUES ('label', '2020-12-22 08:26:51.292695', '2020-12-22 08:26:51.292695')[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:12:in `create'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 78ms (ActiveRecord: 27.5ms | Allocations: 2995)
+
+
+Started GET "/tweets" for ::1 at 2020-12-22 17:26:51 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (7.0ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets`[0m
+  ↳ app/views/tweets/index.html.erb:5
+  Rendered tweets/index.html.erb within layouts/application (Duration: 46.4ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 112.1ms | ActiveRecord: 7.0ms | Allocations: 7382)
+
+
